@@ -1,0 +1,59 @@
+<!DOCTYPE html> 
+<html>
+    <head>
+        <title>Kafene Web-App</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="./header.css">
+        <link rel="stylesheet" href="./logout.css">
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    </head>
+    <body>
+        <header>
+            <div>
+                <div id="LogoBox">
+                    <img src="https://edu-web-fundamentals.web.app/static/media/logo.58169365.png" alt="Logo">
+                    <span>Kafene</span>
+                </div>
+                <nav>
+                    <a class="MenuItem" href="./orders-page.html">Orders</a>
+                    <a class="MenuItem" href="./product-page.html">Products</a>
+                    <a class="MenuItem" href="./user-page.html">Users</a>
+                </nav>
+            </div>
+            <a id="logout" href="./index.html">Logout</a>
+        </header>
+        <main>
+            <div id="MainBox">
+                <h1>Orders</h1>
+                <div class="container">
+                    <div class="filterBox">
+                        <h3>Filters</h3>
+                        <div class="filterOptions">
+                            <p id="rowCount">Count: 100</p>
+                            <label class="filterCheckBox"><input type="checkbox" name="ordersNew" checked="">New</label>
+                            <label class="filterCheckBox"><input type="checkbox" name="ordersPacked" checked="">Packed</label>
+                            <label class="filterCheckBox"><input type="checkbox" name="ordersIntransit" checked="">InTransit</label>
+                            <label class="filterCheckBox"><input type="checkbox" name="ordersDelivered" checked="">Delivered</label>
+                        </div>
+                    </div>
+                    <div class="tableContainer">
+                        <table id="table">
+                            <tr>
+                                <th>ID</th>
+                                <th>Customer</th>
+                                <th>Date</th>
+                                <th>Amount</th>
+                                <th>Status</th>
+                            </tr>
+                            <tbody id="orderRows">
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <script src="./logout.js"></script>
+        <script src="./orders-page.js"></script>
+    </body>
+</html>
